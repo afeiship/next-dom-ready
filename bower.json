@@ -1,0 +1,28 @@
+{
+  "name": "next-dom-ready",
+  "authors": [
+    "afei"
+  ],
+  "description": "DOM ready event based on next.",
+  "main": "dist/DOMReady.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "dom",
+    "ready",
+    "next"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "next-js-core": "*"
+  }
+}
