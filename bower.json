@@ -4,7 +4,7 @@
     "afei"
   ],
   "description": "DOM ready event based on next.",
-  "main": "dist/DOMReady.js",
+  "main": "dist/next-dom-ready.js",
   "moduleType": [
     "node"
   ],

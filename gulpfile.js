@@ -3,21 +3,22 @@
   var gulp = require('gulp');
   var del = require('del');
   var uglify = require('gulp-uglify');
-  var conf = {
-    src: 'src',
-    dist: 'dist'
-  };
+  var rename = require('gulp-rename');
 
   gulp.task('clean', function () {
-    del(conf.dist);
+    return del('dist');
   });
 
-  gulp.task('uglify', function () {
-    gulp.src(conf.src + '/*.js')
+  gulp.task('scripts', function () {
+    gulp.src('src/*.js')
+      .pipe(gulp.dest('dist'))
       .pipe(uglify())
+      .pipe(rename({ extname:'.min.js'}))
       .pipe(gulp.dest('dist'));
   });
 
-  gulp.task('default', ['clean', 'uglify']);
+  gulp.task('default', ['clean'],function(){
+    return gulp.start(['scripts']);
+  });
 
 }());

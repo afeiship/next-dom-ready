@@ -2,12 +2,8 @@
   "name": "next-dom-ready",
   "version": "1.0.0",
   "description": "DOM ready based on next",
-  "main": "gulpfile.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -17,13 +13,13 @@
     "DOMReady",
     "next"
   ],
-  "files": [
-    "dist/DOMReady.js"
-  ],
+ "main":"dist/next-dom-ready.js",
   "author": "afei",
   "license": "MIT",
   "devDependencies": {
     "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.1"
   }
 }

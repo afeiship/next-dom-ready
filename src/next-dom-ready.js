@@ -1,4 +1,7 @@
-(function (nx, global) {
+(function () {
+
+  var global = global || this || self || window;
+  var nx = global.nx || require('next-js-core2');
 
   var document = global.document;
   var ReadyService = nx.declare({
@@ -108,7 +111,7 @@
     }
   });
 
-  nx.ready = function (inHandler) {
+  nx.domReady = function (inHandler) {
     //add handler to queue:
     if (ReadyController.initReady(inHandler)) {
       setTimeout(ReadyController.fireReady, 1);
@@ -117,4 +120,10 @@
     }
   };
 
-}(nx, nx.GLOBAL));
+
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = nx.domReady;
+  }
+
+
+}());

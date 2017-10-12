@@ -1,10 +1,10 @@
-#next-dom-ready
+# next-dom-ready
+> dom ready based on next toolkit
 
-##description:
-+ dom ready based on next toolkit.
+## usage:
 + one api:
 ```javascript
-  nx.ready(function(){
+  nx.domReady(function(){
     console.log('Hello world!');
   });
 ```
